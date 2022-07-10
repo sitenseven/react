@@ -6,16 +6,17 @@ workflows:
         name: React Native App
         environment:
             vars:
-                XCODE_WORKSPACE: "{{ ADD WORKSPACE NAME HERE }}"
-                XCODE_SCHEME: "{{ ADD SCHEME NAME HERE }}"
+                XCODE_WORKSPACE: "sfy"
+                XCODE_SCHEME: "sfy"
             node: latest
         scripts:
             - npm install
             - echo "sdk.dir=$HOME/programs/android-sdk-macosx" > "$FCI_BUILD_DIR/android/local.properties"
-            - |
-                # build Android
-                cd android
-                ./gradlew assembleRelease
+#             - |
+#                 # build Android
+#                 cd android
+#                 ./gradlew assembleRelease
+            - xcodebuild clean -workspace sfy.xcworkspace -scheme sfy | xcpretty
             - |
                 # build iOS
                 cd ios
