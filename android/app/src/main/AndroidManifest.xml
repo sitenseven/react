@@ -18,8 +18,9 @@
       android:theme="@style/AppTheme"
       android:usesCleartextTraffic="true"
       >
-      <meta-data android:name="com.facebook.sdk.ApplicationId" 
+     <meta-data android:name="com.facebook.sdk.ApplicationId" 
         android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="d95a0076136d0459093fa4c2a4529d6b"/>
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
