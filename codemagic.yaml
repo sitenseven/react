@@ -16,7 +16,7 @@ workflows:
 #                 # build Android
 #                 cd android
 #                 ./gradlew assembleRelease
-            - xcodebuild clean -workspace sfy.xcworkspace -scheme sfy | xcpretty
+#             - xcodebuild clean -workspace sfy.xcworkspace -scheme sfy | xcpretty
             - |
                 # build iOS
                 cd ios
