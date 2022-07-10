@@ -6,8 +6,8 @@ workflows:
         name: React Native App
         environment:
             vars:
-                XCODE_WORKSPACE: "myworkspace"
-                XCODE_SCHEME: "scheme"
+                XCODE_WORKSPACE: "sfy"
+                XCODE_SCHEME: "sfy"
             node: latest
         scripts:
             - npm install
@@ -16,7 +16,7 @@ workflows:
 #                 # build Android
 #                 cd android
 #                 ./gradlew assembleRelease
-            - xcodebuild clean -workspace 
+            - xcodebuild clean -workspace sfy.xcworkspace -scheme sfy | xcpretty
             - |
                 # build iOS
                 cd ios
